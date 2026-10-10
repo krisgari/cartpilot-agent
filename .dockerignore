@@ -1,0 +1,9 @@
+.venv
+.git
+.env
+__pycache__
+*.pyc
+tests
+data/*.db*
+data/state.json
+data/eval_state.json

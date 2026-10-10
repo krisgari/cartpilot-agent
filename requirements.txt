@@ -1,0 +1,19 @@
+# Core
+python-dotenv>=1.0.0
+
+# API
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+
+# Orchestration / LLM
+langgraph>=0.2.60
+langchain-core>=0.3.25
+langchain-anthropic>=0.3.10
+
+# MCP server (optional)
+mcp>=1.0.0
+
+# Tests
+pytest>=8.0.0
+httpx>=0.27.0   # FastAPI TestClient

@@ -1,0 +1,204 @@
+{
+  "customers": {
+    "c1": {
+      "name": "Ana Rivera",
+      "dietary": [
+        "vegan"
+      ],
+      "accepted_brands": [
+        "OatCo"
+      ]
+    },
+    "c2": {
+      "name": "Ben Carter",
+      "dietary": [
+        "nut-free"
+      ],
+      "accepted_brands": []
+    }
+  },
+  "stores": {
+    "s1": {
+      "name": "Greenfield Market"
+    }
+  },
+  "wholesalers": {
+    "w1": {
+      "name": "Valley Wholesale Foods"
+    }
+  },
+  "products": {
+    "p100": {
+      "name": "OatCo Oat Milk 1L",
+      "category": "milk-alt",
+      "brand": "OatCo",
+      "price": 4.5,
+      "unit": "1L",
+      "tags": [
+        "vegan",
+        "nut-free"
+      ],
+      "stock": 0,
+      "store_id": "s1"
+    },
+    "p101": {
+      "name": "SoyGood Soy Milk 1L",
+      "category": "milk-alt",
+      "brand": "SoyGood",
+      "price": 3.9,
+      "unit": "1L",
+      "tags": [
+        "vegan",
+        "nut-free"
+      ],
+      "stock": 14,
+      "store_id": "s1"
+    },
+    "p102": {
+      "name": "AlmondDream Almond Milk 1L",
+      "category": "milk-alt",
+      "brand": "AlmondDream",
+      "price": 4.2,
+      "unit": "1L",
+      "tags": [
+        "vegan"
+      ],
+      "stock": 9,
+      "store_id": "s1"
+    },
+    "p103": {
+      "name": "FarmFresh Whole Milk 1L",
+      "category": "milk-alt",
+      "brand": "FarmFresh",
+      "price": 2.8,
+      "unit": "1L",
+      "tags": [
+        "nut-free"
+      ],
+      "stock": 30,
+      "store_id": "s1"
+    },
+    "p104": {
+      "name": "OatCo Barista Oat Milk 1L",
+      "category": "milk-alt",
+      "brand": "OatCo",
+      "price": 5.1,
+      "unit": "1L",
+      "tags": [
+        "vegan",
+        "nut-free"
+      ],
+      "stock": 6,
+      "store_id": "s1"
+    },
+    "p200": {
+      "name": "Free Range Eggs 12ct",
+      "category": "eggs",
+      "brand": "SunnyHen",
+      "price": 6.5,
+      "unit": "12ct",
+      "tags": [
+        "nut-free"
+      ],
+      "stock": 40,
+      "store_id": "s1"
+    },
+    "p300": {
+      "name": "Sourdough Loaf",
+      "category": "bread",
+      "brand": "CrustLab",
+      "price": 5.0,
+      "unit": "1ea",
+      "tags": [
+        "vegan",
+        "nut-free"
+      ],
+      "stock": 11,
+      "store_id": "s1"
+    },
+    "p400": {
+      "name": "Wagyu Ribeye Steak",
+      "category": "meat",
+      "brand": "PrimeCut",
+      "price": 62.0,
+      "unit": "1ea",
+      "tags": [
+        "nut-free"
+      ],
+      "stock": 5,
+      "store_id": "s1"
+    }
+  },
+  "orders": {
+    "o1001": {
+      "customer_id": "c1",
+      "store_id": "s1",
+      "status": "shopping",
+      "items": {
+        "i1": {
+          "product_id": "p100",
+          "qty": 1,
+          "status": "out_of_stock"
+        },
+        "i2": {
+          "product_id": "p300",
+          "qty": 1,
+          "status": "found"
+        }
+      }
+    },
+    "o1002": {
+      "customer_id": "c1",
+      "store_id": "s1",
+      "status": "delivered",
+      "items": {
+        "i1": {
+          "product_id": "p200",
+          "qty": 1,
+          "status": "missing"
+        },
+        "i2": {
+          "product_id": "p300",
+          "qty": 1,
+          "status": "delivered"
+        }
+      }
+    },
+    "o1003": {
+      "customer_id": "c1",
+      "store_id": "s1",
+      "status": "delivered",
+      "items": {
+        "i1": {
+          "product_id": "p400",
+          "qty": 1,
+          "status": "damaged"
+        }
+      }
+    },
+    "o2001": {
+      "customer_id": "c2",
+      "store_id": "s1",
+      "status": "delivered",
+      "items": {
+        "i1": {
+          "product_id": "p200",
+          "qty": 1,
+          "status": "missing"
+        }
+      }
+    },
+    "o2002": {
+      "customer_id": "c2",
+      "store_id": "s1",
+      "status": "shopping",
+      "items": {
+        "i1": {
+          "product_id": "p100",
+          "qty": 1,
+          "status": "out_of_stock"
+        }
+      }
+    }
+  }
+}

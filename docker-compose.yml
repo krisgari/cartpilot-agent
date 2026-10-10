@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:?set ANTHROPIC_API_KEY in .env}
+      # No default on purpose: the service is fail-closed without a JWT secret.
+      CARTPILOT_JWT_SECRET: ${CARTPILOT_JWT_SECRET:?set CARTPILOT_JWT_SECRET in .env}
+      CARTPILOT_MODEL: ${CARTPILOT_MODEL:-claude-sonnet-4-5-20250929}
+      CARTPILOT_JWT_ISSUER: ${CARTPILOT_JWT_ISSUER:-}
+      CARTPILOT_JWT_AUDIENCE: ${CARTPILOT_JWT_AUDIENCE:-}
+      CARTPILOT_ENV: production
+    volumes:
+      - cartpilot-data:/data
+    restart: unless-stopped
+
+volumes:
+  cartpilot-data:
